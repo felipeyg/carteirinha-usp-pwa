@@ -21,9 +21,9 @@ body {
 }
 
 .card {
-    width: 76vw; /* Ajusta ao tamanho da tela do dispositivo */
-    max-width: 300px; /* Limite máximo de largura para garantir boa proporção */
-    padding: 15px; /* Padding reduzido para adaptar melhor a telas menores */
+    width: 70vw; /* Ajuste ao tamanho da tela do dispositivo */
+    max-width: 350px; /* Limite máximo de largura para garantir boa proporção */
+    padding: 15px; /* Padding para manter a consistência visual */
     background: #f57e20;
     color: white;
     border-radius: 10px;
@@ -114,4 +114,26 @@ img#studentImage {
 #expiryText {
     font-size: 3.2vw; /* Tamanho menor para a data de expiração */
     margin-top: 10px;
+}
+
+/* Media Queries para Melhorar a Responsividade */
+@media screen and (min-width: 480px) {
+    .card {
+        width: 65vw; /* Para dispositivos um pouco maiores */
+        max-width: 350px; /* Garantir boa proporção */
+    }
+}
+
+@media screen and (min-width: 768px) {
+    .card {
+        width: 60vw; /* Para tablets */
+        max-width: 400px; /* Ajuste para garantir proporção adequada */
+    }
+}
+
+@media screen and (min-width: 1024px) {
+    .card {
+        width: 50vw; /* Para telas maiores, como laptops */
+        max-width: 450px; /* Um limite um pouco maior para garantir boa proporção */
+    }
 }
