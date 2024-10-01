@@ -38,7 +38,7 @@ body {
 .card-header {
     background-color: #c66e00;
     height: 40px;
-    width: 100%;
+    width: calc(100% - 30px); /* Define o mesmo tamanho do card, considerando o padding */
     position: absolute;
     top: 0;
     left: 0;
