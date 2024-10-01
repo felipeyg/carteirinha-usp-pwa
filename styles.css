@@ -29,12 +29,44 @@ body {
     box-shadow: 0px 0px 10px rgba(0,0,0,0.2);
     text-align: center;
     display: none;
+    position: relative;
+}
+
+/* Estilo da Borda Superior */
+.card-header {
+    background-color: #c66e00;
+    height: 40px;
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 10px;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+}
+
+.card-title {
+    font-weight: bold;
+    color: white;
+}
+
+.card-icons {
+    display: flex;
+    gap: 10px;
+}
+
+.icon {
+    width: 20px;
+    height: 20px;
 }
 
 .usp-logo {
-    width: 120px; /* Tamanho ajustado para o logo */
-    margin: 0 auto 10px auto; /* Centraliza o logo e adiciona espaçamento abaixo */
-    display: block; /* Certifica-se que é tratado como bloco para ser centralizado */
+    width: 120px;
+    margin: 60px auto 10px auto; /* Espaço para não sobrepor a header */
+    display: block;
 }
 
 .card h2 {
