@@ -28,6 +28,11 @@ body {
     display: none;
 }
 
+.usp-logo {
+    width: 100px; /* Ajuste o tamanho conforme necessário */
+    margin-bottom: 10px; /* Espaçamento entre o logo e o título */
+}
+
 img {
     width: 150px;
     height: 200px; /* Proporção 3:4 */
