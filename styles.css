@@ -23,8 +23,9 @@ body {
     background: #f57e20;
     color: white;
     border-radius: 10px;
-    margin: auto;
+    margin: 20px auto;
     box-shadow: 0px 0px 10px rgba(0,0,0,0.2);
+    text-align: center;
     display: none;
 }
 
@@ -38,6 +39,7 @@ img {
     height: 200px; /* Proporção 3:4 */
     object-fit: cover; /* Garante que a imagem ocupe todo o espaço */
     border: 2px solid white; /* Opcional: borda branca para destacar a foto */
+    margin: 10px 0;
 }
 
 .bold-text {
