@@ -33,17 +33,18 @@ function generateCard() {
     document.getElementById('studentNumber').innerText = cardNumber;
     document.getElementById('expiryText').innerText = `Código QR expira em ${expiryDate} 23:59`;
 
-    // Gerar o QR Code
+// Gerar o QR Code
     const qrcodeContainer = document.getElementById('qrcode');
     qrcodeContainer.innerHTML = ''; // Limpar QR Code anterior
     new QRCode(qrcodeContainer, {
         text: `https://meu-link-para-credencial.com/${cardNumber}`,
-        width: 128,
-        height: 128,
+        width: 80,  // Largura do QR Code
+        height: 80, // Altura do QR Code
         colorDark: "#000000",
         colorLight: "#ffffff",
         correctLevel: QRCode.CorrectLevel.H
     });
+
 
     // Ocultar formulário e exibir carteirinha
     document.getElementById('formContainer').style.display = 'none';

@@ -7,8 +7,9 @@ body {
 }
 
 .container {
-    width: 300px;
-    margin: 40px auto; /* Centraliza o container na tela */
+    width: 90vw;
+    max-width: 300px;
+    margin: 5vh auto; /* Centraliza o container vertical e horizontalmente */
 }
 
 .form-container {
@@ -20,12 +21,13 @@ body {
 }
 
 .card {
-    width: 300px;
-    padding: 20px;
+    width: 90vw; /* Ajusta ao tamanho da tela do dispositivo */
+    max-width: 300px; /* Tamanho máximo para garantir a boa proporção */
+    padding: 15px; /* Padding reduzido para adaptar melhor a telas menores */
     background: #f57e20;
     color: white;
     border-radius: 10px;
-    margin: 20px auto;
+    margin: 10px auto;
     box-shadow: 0px 0px 10px rgba(0,0,0,0.2);
     text-align: center;
     display: none;
@@ -51,6 +53,7 @@ body {
 .card-title {
     font-weight: bold;
     color: black; /* Atualizado para preto */
+    font-size: 3.5vw; /* Tamanho adaptativo da fonte */
 }
 
 .card-icons {
@@ -64,43 +67,52 @@ body {
 }
 
 .usp-logo {
-    width: 120px;
-    margin: 60px auto 10px auto; /* Espaço para não sobrepor a header */
+    width: 80px; /* Tamanho reduzido para telas menores */
+    margin: 50px auto 10px auto; /* Espaço para não sobrepor a header */
     display: block;
 }
 
 .card h2 {
     margin-top: 5px;
     font-weight: bold;
+    font-size: 4vw; /* Tamanho adaptativo para o título */
 }
 
 .card h3 {
     margin: 10px 0;
     font-weight: bold;
+    font-size: 3.5vw; /* Tamanho adaptativo para subtítulo */
 }
 
 img#studentImage {
-    width: 150px;
-    height: 200px; /* Proporção 3:4 */
+    width: 120px; /* Tamanho reduzido para caber melhor na tela do celular */
+    height: 160px; /* Proporção 3:4 */
     object-fit: cover; /* Garante que a imagem ocupe todo o espaço */
     border: 2px solid white; /* Borda branca ao redor da foto */
-    margin: 15px 0; /* Espaçamento ao redor da foto */
+    margin: 10px 0; /* Espaçamento ao redor da foto */
 }
 
 .bold-text {
     font-weight: bold;
     margin: 5px 0;
+    font-size: 3.5vw; /* Fonte adaptativa para textos de destaque */
 }
 
 #studentNumber, #studentFaculty, #studentLevel {
     margin: 5px 0; /* Espaçamento para textos adicionais */
+    font-size: 3.5vw; /* Tamanho adaptativo para textos */
 }
 
 #qrcode {
-    margin: 20px 0; /* Espaçamento acima e abaixo do QR Code */
+    margin: 20px auto; /* Espaçamento e centralização */
+    padding: 10px; /* Adiciona um espaçamento ao redor do QR Code para formar a borda */
+    background-color: white; /* Cor de fundo branco para o contorno */
+    display: inline-block; /* Para garantir que a borda seja exibida ao redor do QR Code */
+    border-radius: 10px; /* Arredonda os cantos do contorno */
 }
 
+
 #expiryText {
-    font-size: 14px;
+    font-size: 3.2vw; /* Tamanho menor para a data de expiração */
     margin-top: 10px;
 }
