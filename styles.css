@@ -22,12 +22,12 @@ body {
 
 .card {
     width: 90vw; /* Ajusta ao tamanho da tela do dispositivo */
-    max-width: 300px; /* Tamanho máximo para garantir a boa proporção */
+    max-width: 300px; /* Limite máximo de largura para garantir boa proporção */
     padding: 15px; /* Padding reduzido para adaptar melhor a telas menores */
     background: #f57e20;
     color: white;
     border-radius: 10px;
-    margin: 10px auto;
+    margin: 5vh auto; /* Garante que a margem seja igual e a div fique centralizada */
     box-shadow: 0px 0px 10px rgba(0,0,0,0.2);
     text-align: center;
     display: none;
@@ -110,7 +110,6 @@ img#studentImage {
     display: inline-block; /* Para garantir que a borda seja exibida ao redor do QR Code */
     border-radius: 10px; /* Arredonda os cantos do contorno */
 }
-
 
 #expiryText {
     font-size: 3.2vw; /* Tamanho menor para a data de expiração */
