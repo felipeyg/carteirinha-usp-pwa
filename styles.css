@@ -50,7 +50,7 @@ body {
 
 .card-title {
     font-weight: bold;
-    color: white;
+    color: black; /* Atualizado para preto */
 }
 
 .card-icons {
