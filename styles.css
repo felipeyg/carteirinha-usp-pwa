@@ -29,9 +29,14 @@ body {
 }
 
 img {
-    border-radius: 50%;
-    width: 100px;
-    height: 100px;
+    width: 150px;
+    height: 200px; /* Proporção 3:4 */
+    object-fit: cover; /* Garante que a imagem ocupe todo o espaço */
+    border: 2px solid white; /* Opcional: borda branca para destacar a foto */
+}
+
+.bold-text {
+    font-weight: bold;
 }
 
 #qrcode {
