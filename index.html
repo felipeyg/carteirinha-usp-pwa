@@ -1,8 +1,7 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="viewport" content="width=device-width, initial-scale=1.0">
     <title>Carteirinha USP Simulada - PWA</title>
     <link rel="stylesheet" href="styles.css">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/qrcodejs/1.0.0/qrcode.min.js"></script>
@@ -23,7 +22,7 @@
                 <span class="card-title">e-Card</span>
                 <span class="card-icons">
                     <img src="img/barcode-icon.png" alt="Ícone de código de barras" class="icon">
-                    <img src="img/menu-icon.png" alt="Ícone de menu" class="icon">
+                    <img src="img/menu-icon.png" alt="Ícone de menu" class="icon" onclick="toggleMenu()">
                 </span>
             </div>
             <img src="img/usp-logo.webp" alt="Logo da USP" class="usp-logo">
@@ -36,6 +35,13 @@
             <p id="studentLevel">GRADUAÇÃO</p>
             <div id="qrcode"></div>
             <p id="expiryText"></p>
+        </div>
+        
+        <!-- Menu suspenso -->
+        <div id="dropdownMenu" class="dropdown-menu">
+            <ul>
+                <li onclick="resetCard()">Resetar Carteirinha</li>
+            </ul>
         </div>
     </div>
 
