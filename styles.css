@@ -1,6 +1,7 @@
 :root {
     --primary: #2d375a;
     --primary-dark: #1f2742;
+    --header: #2f6fd6;
     --accent: #5e7cd6;
     --card-text: #ffffff;
     --bg: #eef1f8;
@@ -82,12 +83,11 @@ body {
 .card {
     width: 100%;
     max-width: 340px;
-    padding: 56px 18px 20px;
-    background: linear-gradient(160deg, var(--primary), var(--primary-dark));
+    padding: 58px 18px 24px;
+    background: var(--primary);
     color: var(--card-text);
-    border-radius: 14px;
-    margin: 4vh auto;
-    box-shadow: 0 6px 20px rgba(31, 39, 66, 0.25);
+    border-radius: 0;
+    margin: 0 auto;
     text-align: center;
     display: none;
     position: relative;
@@ -95,8 +95,8 @@ body {
 }
 
 .card-header {
-    background-color: var(--primary-dark);
-    height: 42px;
+    background-color: var(--header);
+    height: 48px;
     width: 100%;
     position: absolute;
     top: 0;
