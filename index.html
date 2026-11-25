@@ -3,45 +3,57 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Carteirinha USP Simulada - PWA</title>
+    <meta name="theme-color" content="#2d375a">
+    <title>Credencial Estudantil (Demonstração)</title>
     <link rel="stylesheet" href="styles.css">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/qrcodejs/1.0.0/qrcode.min.js"></script>
     <link rel="manifest" href="manifest.json">
+    <link rel="icon" href="icons/icon-192x192.png">
 </head>
 <body>
     <div class="container">
         <div class="form-container" id="formContainer">
-            <h2>Preencha seus dados</h2>
-            <input type="text" id="name" placeholder="Nome completo"><br><br>
-            <input type="number" id="cardNumber" placeholder="Número USP"><br><br>
-            <input type="file" id="fileInput" accept="image/*"><br><br>
-            <button onclick="generateCard()">Gerar Carteirinha</button>
+            <h1 class="app-title">Credencial Estudantil</h1>
+            <p class="app-subtitle">Projeto de demonstração &middot; não é um documento oficial</p>
+            <label for="name">Nome completo</label>
+            <input type="text" id="name" placeholder="Ex.: Maria da Silva">
+            <label for="cardNumber">Número de matrícula</label>
+            <input type="text" id="cardNumber" inputmode="numeric" placeholder="Ex.: 123456">
+            <label for="course">Curso</label>
+            <input type="text" id="course" placeholder="Ex.: Engenharia">
+            <label for="fileInput">Foto</label>
+            <input type="file" id="fileInput" accept="image/*">
+            <button type="button" onclick="generateCard()">Gerar credencial</button>
         </div>
 
-        <div class="card" id="card">
+        <div class="card" id="card" role="img" aria-label="Credencial estudantil de demonstração">
             <div class="card-header">
-                <span class="card-title">e-Card</span>
+                <span class="card-title">Credencial</span>
                 <span class="card-icons">
-                    <img src="img/barcode-icon.png" alt="Ícone de código de barras" class="icon">
-                    <img src="img/menu-icon.png" alt="Ícone de menu" class="icon" onclick="toggleMenu()">
+                    <img src="img/menu-icon.png" alt="Abrir menu" class="icon" onclick="toggleMenu()">
                 </span>
             </div>
-            <img src="img/usp-logo.webp" alt="Logo da USP" class="usp-logo">
-            <h2>Universidade de São Paulo</h2>
-            <h3>ALUNO</h3>
-            <img id="studentImage" src="photo-placeholder.png" alt="Foto do Aluno">
+
+            <div class="brand-badge">DEMONSTRAÇÃO</div>
+
+            <h2 class="institution">Instituto Modelo</h2>
+            <h3 class="credential-kind">Estudante</h3>
+
+            <img id="studentImage" src="img/photo-placeholder.png" alt="Foto do estudante" width="120" height="160">
+
             <p id="studentName" class="bold-text"></p>
             <p id="studentNumber"></p>
-            <p id="studentFaculty" class="bold-text">Escola de Engenharia de Lorena</p>
-            <p id="studentLevel">GRADUAÇÃO</p>
+            <p id="studentCourse" class="bold-text"></p>
+            <p id="studentLevel">Graduação</p>
+
             <div id="qrcode"></div>
             <p id="expiryText"></p>
+            <p class="disclaimer">Documento fictício, sem validade oficial.</p>
         </div>
 
-        <!-- Menu suspenso -->
         <div id="dropdownMenu" class="dropdown-menu">
             <ul>
-                <li onclick="resetCard()">Resetar Carteirinha</li>
+                <li onclick="resetCard()">Resetar credencial</li>
             </ul>
         </div>
     </div>
